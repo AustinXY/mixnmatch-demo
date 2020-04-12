@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="croppie.css">
+    <title>MixNMatch Demo</title>
+</head>
+
+<body>
+
+    <div class="masterContainer">
+
+        <div class="titleContainer">
+            <h1 class="title">MixNMatch demo</h1>
+        </div>
+
+        <div id="sourceContainer">
+            <div class="imgBlock">
+                <p>Select background image</p>
+                <div class="imageContainer">
+                    <div id="bg_img_crop"></div>
+                </div>
+                <input type="file" name="file1" id="bg_upload" multiple="multiple" accept="image/*">
+            </div>
+
+            <div class="imgBlock">
+                <p>Select shape image</p>
+                <div class="imageContainer">
+                    <div id="shp_img_crop"></div>
+                </div>
+                <input type="file" name="file1" id="shp_upload" multiple="multiple" accept="image/*">
+            </div>
+
+            <div class="imgBlock">
+                <p>Select texture image</p>
+                <div class="imageContainer">
+                    <div id="txtr_img_crop"></div>
+                </div>
+                <input type="file" name="file1" id="txtr_upload" multiple="multiple" accept="image/*">
+            </div>
+
+            <div class="imgBlock">
+                <p>Select pose image</p>
+                <div class="imageContainer">
+                    <div id="pose_img_crop"></div>
+                </div>
+                <input type="file" name="file1" id="pose_upload" multiple="multiple" accept="image/*">
+            </div>
+        </div>
+        <button id="submit" value="upload">upload</button>
+
+        <div id="rsltContainer">
+            <p>result image</p>
+            <div class="imageContainer">
+                <img id="out_img">
+            </div>
+        </div>
+
+        <div id="textContainer">
+            <!-- <p>FineGAN disentangles the background, object shape (parent), and object appearance (child) to
+                hierarchically generate fine-grained objects, without any fine-grained annotations.</p> -->
+            <p id="disc_txt">More information at <a href="https://github.com/Yuheng-Li/MixNMatch"> github repository </a></p>
+        </div>
+    </div>
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="croppie.js"></script>
+<script src="upload_form.js"></script>
+
+</html>
